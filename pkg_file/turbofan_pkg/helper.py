@@ -1,38 +1,6 @@
 """ Libraries to be used along turbofan dataset project """
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import pickle as pkl
-
-import re, time, os
-import umap, hdbscan, operator
-
-from os.path import basename, join
-from glob import glob
-from pandas_summary import DataFrameSummary
-from mpl_toolkits.mplot3d import Axes3D
-#from MulticoreTSNE import MulticoreTSNE as TSNE
-#from skopt import gp_minimize
-#from xgboost import XGBRegressor, XGBClassifier, plot_importance
-from pandas.plotting import autocorrelation_plot
-from statsmodels.tsa.stattools import acf, pacf
-from statsmodels.tsa.stattools import adfuller
-from importlib import reload
-
-from sklearn.preprocessing import scale, StandardScaler, LabelEncoder, LabelBinarizer
-from sklearn.cross_validation import cross_val_score
-from sklearn.decomposition import PCA
-from sklearn.cluster import KMeans
-from sklearn.linear_model import Ridge
-from sklearn.metrics import mean_squared_error, make_scorer, matthews_corrcoef, mean_absolute_error
-
-#from keras.optimizers import Adam
-#from keras.models import Sequential
-#from keras.layers import Dense
-#from keras.layers import LSTM, Dropout, TimeDistributed, BatchNormalization, Input, Bidirectional
-
-from tqdm import *
 
 """ Functions to be used along turbofan dataset project """
 
