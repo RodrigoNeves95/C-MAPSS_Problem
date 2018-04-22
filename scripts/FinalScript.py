@@ -74,7 +74,7 @@ if __name__ == "__main__":
                         help='learning rate')
     parser.add_argument('--batch_size', default=256, type=int,
                         help='Batch Size')
-    parser.add_argument('--num_epochs', default=10, type=int,
+    parser.add_argument('--num_epochs', default=15, type=int,
                         help='Maximum number of epochs')
     parser.add_argument('--model', default='RNN', type=str,
                         choices=['RNN', 'LSTM', 'GRU', 'QRNN', 'TCN', 'DRNN'],
@@ -88,15 +88,15 @@ if __name__ == "__main__":
                         help='Normalization to use')
     parser.add_argument('--scheduler', default=False, type=bool,
                         help='Flag to choose to use lr scheduler')
-    parser.add_argument('--train_steps', nargs=2, type=int, default=[10, 130],
+    parser.add_argument('--train_steps', nargs=2, type=int, default=[10, 200],
                         help='Interval to be optimized')
-    parser.add_argument('--hidden_size', nargs=2, type=int, default=[10, 128],
+    parser.add_argument('--hidden_size', nargs=2, type=int, default=[10, 256],
                         help='Interval to be optimized')
     parser.add_argument('--num_layers', nargs=2, type=int, default=[1, 5],
                         help='Interval to be optimized')
     parser.add_argument('--kernel_size', nargs=2, type=int, default=[2, 50],
                         help='Interval of kernel size for TCN and QRNN models')
-    parser.add_argument('--initial_point', nargs=4, type=int, default=[20, 20, 2, 10],
+    parser.add_argument('--initial_point', nargs=4, type=int, default=[50, 32, 1, 10],
                         help='Initial point for optimization')
     parser.add_argument('--N_CALLS', default=40, type=int,
                         help='Number of calls for optmization')

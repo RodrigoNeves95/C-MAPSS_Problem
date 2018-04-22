@@ -8,7 +8,6 @@ from sklearn.model_selection import KFold
 from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
 
-import hdbscan
 
 SEED = 1337
 
@@ -66,6 +65,7 @@ class DataReader(object):
         self.train_turbines = np.arange(len(self.train.index.to_series().unique()))
         self.test_turbines = np.arange(len(self.test.index.to_series().unique()))
 
+    """
     def cluestering(self,
                     train,
                     validation,
@@ -90,6 +90,7 @@ class DataReader(object):
             return train, validation, test
         else:
             return train, validation
+    """
 
     def normalize_by_type(self,
                           train,
