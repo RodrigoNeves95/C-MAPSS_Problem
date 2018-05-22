@@ -15,6 +15,7 @@ from turbofan_pkg import DataReader
 from turbofan_pkg.helper import *
 from glob import glob
 
+
 class Trainer(object):
 
     def __init__(self,
@@ -402,3 +403,16 @@ class Trainer(object):
                 best_file = file
 
         self.load(best_file)
+
+    def init_weights(self):
+        raise NotImplementedError
+
+    def training_step(self):
+        raise NotImplementedError
+
+    def evaluation_step(self):
+        raise NotImplementedError
+
+    def prediction_step(self):
+        raise NotImplementedError
+

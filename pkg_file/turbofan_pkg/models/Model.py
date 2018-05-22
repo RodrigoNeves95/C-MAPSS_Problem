@@ -86,6 +86,53 @@ class RNNTrainer(Trainer):
                  use_scheduler=False,
                  validation_split=0.2,
                  **kwargs):
+        """
+        Recurrent + CNN models Trainer
+
+        Parameters
+        ----------
+        lr : float
+
+        number_steps_train : int
+            Sequence train length
+
+        hidden_size : int
+
+        num_layers : int
+
+        cell_type : str
+            Choose model to implement
+
+        batch_size : int
+
+        num_epoch : int
+
+        number_features_input : int
+            Number of features in input
+
+        number_features_output : int
+            Number of features in output
+
+        kernel_size : int, optional, default : None
+            Kernel size for convolutional models
+
+        loss_function : str, default : Adam
+            Loss function to use. Currently implemented : MSE, MAE
+
+        optimizer : str, default : MSE
+            Optimizer to use. Currently implemented : Adam, SGD, RMSProp, Adadelta, Adagrad
+
+        normalizer : str, default : Standardization
+            Normalizer for the data
+
+        use_scheduler : boolean, default : False
+            If True use learning rate scheduler
+
+        validation_split : int
+            Validation split ratio
+
+        kwargs : **
+        """
 
         super(RNNTrainer, self).__init__(**kwargs)
 
