@@ -1,0 +1,12 @@
+hdbscan
+pandas
+numpy
+tensorboardX
+setuptools
+scikit-learn
+scikit-optimize
+cupy
+pynvrtc
+tqdm
+statsmodels
+pickle
